@@ -139,7 +139,7 @@ def ocr_hero_buy():
         elif not paused:  # 只有在未暂停时才输出未检测到英雄的信息
             print("当前未检测到英雄")
 
-        time.sleep(0.5)
+        time.sleep(0.33)
 
 # 更新当前抓取的英雄列表
 def update_current_heroes():
@@ -192,7 +192,7 @@ def toggle_pause():
     global paused
     paused = not paused
     if paused:
-        print("检测已暂停。按 D 键刷新卡牌或 HOME 键继续检测，或者再次按 END 键解除暂停。")
+        print("检测已暂停。按 HOME 键继续检测，或者再次按 END 键解除暂停。")
     else:
         print("恢复检测...")
 
@@ -268,7 +268,6 @@ def stop_shuffling():
 
 # 绑定键盘热键
 keyboard.add_hotkey('home', start_detection)  # 开始持续检测
-keyboard.add_hotkey('d', start_detection)  # D键也可以开始抓牌
 keyboard.add_hotkey('end', toggle_pause)  # 按下 End 键暂停/恢复
 keyboard.add_hotkey('f1', lambda: threading.Thread(target=shuffling).start())  # F1 键触发梭哈功能
 keyboard.add_hotkey('ctrl+u', uncheck_all)  # Ctrl+U 取消所有勾选
