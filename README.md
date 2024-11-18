@@ -16,3 +16,24 @@ folder_path = os.path.join(current_dir, 'chanchankapai')  # 卡牌图片文件�
 
 
 切勿拿去倒卖盈利，产生的一切法律后果本人概不负责！
+
+
+S13赛季请下载S13文件夹，采用OCR识别方案
+用到的库
+import os
+import json
+import numpy as np
+import tkinter as tk
+from tkinter import ttk
+from paddleocr import PaddleOCR
+import threading
+import win32gui
+import time
+from PIL import Image, ImageTk
+from pyautogui import screenshot, moveTo, mouseDown, mouseUp
+import keyboard
+F1一键梭哈
+HOME开始抓牌
+END/暂停/恢复
+F12完全停止
+手动选择需要识别的窗口
